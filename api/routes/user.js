@@ -8,9 +8,13 @@ router.get('/', (req, res, next) =>{
 });
 
 router.post('/', (req, res, next) =>{
+    const user = {
+        name: req.body.name
+        pw: req.body.pw
+    };
     res.status(200).json({
-        message: 'Handling Po' +
-            'st'
+        message: 'Handling Post',
+        createdUser: user
     })
 });
 
