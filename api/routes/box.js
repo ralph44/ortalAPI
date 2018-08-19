@@ -20,15 +20,10 @@ router.post('/', (req, res, next) =>{
 
 router.get('/:box', (req, res, next) =>{
     const box = req.params.box;
-    if (box === '1'){
+    const string = "boxhinhalt " + box;
         res.status(200).json({
-            message: 'boxinhalt'
+            message: string
         });
-    } else {
-        res.status(200).json({
-            message: 'kein Boxinhalt'
-        });
-    }
     next();
 });
 
